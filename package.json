@@ -1,0 +1,12 @@
+{
+  "name": "tobjod",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rathanont/tobjod.git",
+  "author": "Rathanont Sukhapant <rathanont.s@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1"
+  }
+}

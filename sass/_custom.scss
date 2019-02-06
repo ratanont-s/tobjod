@@ -1,0 +1,70 @@
+// Colors
+$yellow:#ECE74E;
+$gold:#C3672C;
+
+// BG Gradients
+@mixin bg-gradient-1 {
+    @include gradient-x($start-color: $yellow, $end-color: $gold, $start-percent: 0%, $end-percent: 100%);
+}
+
+[class*='-primary'] {
+    color: color-yiq($dark);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Header
+header {
+    @include bg-gradient-1;
+    padding: .5rem 0;
+    box-shadow: $box-shadow-sm;
+}
+
+// Footer
+footer {
+    @include bg-gradient-1;
+    padding: 2.5rem 0 .5rem;
+    margin-top: auto;
+}
+
+// .card-insurance
+.card-insurance {
+    border-radius: 3rem;
+
+    img {
+        height: 8rem;
+        width: 8rem;
+        object-fit: contain;
+        margin: auto;
+    }
+}
+
+.table {
+    tbody {
+        tr {
+
+            th:not([colspan]),
+            td {
+                position: relative;
+                border: unset;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: calc(100% - .5rem);
+                    height: calc(100% - .5rem);
+                    border: 1px solid $gray-400;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
