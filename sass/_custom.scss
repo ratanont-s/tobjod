@@ -82,9 +82,9 @@ footer {
 
 .table {
     tbody {
-        tr {
+        tr:not([class]) {
 
-            th:not([colspan]),
+            th,
             td {
                 position: relative;
                 border: unset;
